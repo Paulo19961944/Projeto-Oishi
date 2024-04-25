@@ -13,4 +13,4 @@ Ao contrario do branco, no oriente, essa é uma cor utilizada pelos mestres ou a
 **#DC0000 →** Essa é uma cor que estimula o apetite, pois o vermelho é uma cor quente. Da um certo calor, e também simboliza o Elemento Fogo. Usando em complemento com a Cultura Oriental, é a cor da Serpente Emplumada, que é o Dragão, muito popular na cultura japonesa e com o oriente em si. Além de ser a cor do logo, podendo utilizar a marca da empresa e seus valores tradicionais.<br/><br/>
 
 # LINK DO PROJETO
-[Acesse o Projeto Aqui!!!](https://paulo19961944.github.io/Projeto-Oishi/)
+[Acesse o Projeto Aqui!](https://paulo19961944.github.io/Projeto-Oishi/)
