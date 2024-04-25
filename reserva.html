@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/Favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Restaurante Oishi - O Sabor do Japão você encontra aqui</title>
+</head>
+
+<body>
+    <header>
+        <img src="imagens/logo_oishi.png" alt="Logotipo" id="logo">
+        <img src="imagens/Hamburger_icon.png" alt="Menu para Celular" id="menuResponsivo">
+        <img src="imagens/Fechar-Menu-Mobile.png" alt="Fechar Menu para Celular" id="fecharMenuMobile">
+        <nav>
+            <ul id="menuDesktop">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre-o-oishi.html">Sobre o Oishi</a></li>
+                <li><a href="ambiente.html">Ambiente</a></li>
+                <li><a href="cardapio.html">Cardápio</a></li>
+                <li><a href="localizacao.html">Localização</a></li>
+                <li><a href="reserva.html">Reserva</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2 class="hidden-desktop">RESERVA</h2>
+            <article class="image-container">
+                <img src="imagens/reserva.jpg" alt="Cartão de Reserva">
+            </article>
+            <article class="text-container">
+                <h1 class="hidden-mobile">RESERVA</h1>
+                <p>Faça sua reserva diretamente pelo Whatsapp: (11) 6666-1234</p>
+                <strong>Ou se preferir, envie-nos um e-mail: contato@oishi.com.br</strong>
+            </article>
+        </section>
+        <a href="https://wa.link/83974f"><img src="imagens/whatsapp.png" alt="Chame-nos pelo Whatsapp" id="whatsapp"></a>
+    </main>
+    <form action="https://formsubmit.co/nascimentopaulo804@gmail.com" method="POST">
+        <label for="nameLabel">Nome:</label>
+        <input type="text" name="nome" id="nameLabel" required>
+        <label for="telLabel">Telefone:</label>
+        <input type="tel" name="tel" id="telLabel" required>
+        <label for="mailLabel">E-mail:</label>
+        <input type="email" name="email" id="mailLabel" required>
+        <input type="submit" value="Enviar" id="submitBtn">
+    </form>
+    <footer>
+        <small id="footerText"></small>
+    </footer>
+    <script src="JS/script.js"></script>
+</body>
+
+</html>

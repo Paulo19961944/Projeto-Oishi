@@ -1,0 +1,461 @@
+/*ESTILO GLOBAL*/
+*{
+    margin: 0; /*Zera a Margem*/
+    padding: 0; /*Espaçamento Interno*/
+    box-sizing: border-box; /*Ajusta o Box Model*/
+}
+
+/*CONTEÚDO DO HTML*/
+body{
+    position: relative; /*Posição Relativa*/
+    background-color: #F0E2EF; /*Cor de Fundo - Branco*/
+    color: #1C1C1C; /*Cor Preto*/
+}
+
+/*CABEÇALHO*/
+header{
+    position: relative; /*Posição Relativa*/
+    display: flex; /*Flexbox*/
+    justify-content: space-between; /*Alinha os itens um de cada lado*/
+    padding: 0 16px; /*Espaçamento de 16px*/
+    box-shadow: 1px 1px 10px #1C1C1C; /*Sombra do Cabeçalho*/
+    margin-bottom: 48px; /*Margem Inferior de 48px*/
+}
+
+/*TITULOS E SUBTITULOS*/
+h1, h2{
+    text-align: center; /*Alinha o Texto ao Centro*/
+    font-size: 1.72em; /*Tamanho da Fonte em 172%*/
+    font-family: "DM Serif Display", serif; /*FONTE DO GOOGLE - DM SERIF DISPLAY*/
+}
+
+p, small, span, strong, .texto-cardapio ul, label, input, #menuDesktop a{
+    font-family: "DM Sans", sans-serif; /*FONTE DO GOOGLE - DM SANS*/
+    font-size: 0.75em; /*Tamanho da Fonte em 75%*/
+}
+
+/*TEXTO IMPORTANTE DA PÁGINA*/
+strong{
+    margin-top: 32px; /*Margem do topo de 32px*/
+}
+
+/*DESTAQUE NA PÁGINA*/
+span{
+    font-weight: bold;/*Fonte em Negrito*/
+}
+
+/*ESCONDER O ELEMENTO NO MOBILE*/
+.hidden-mobile{
+    display: none; /*Esconde o Elemento*/
+}
+
+/*TITULO DA SEÇÃO DO CONTEÚDO PRINCIPAL DA PÁGINA CARDÁPÍO*/
+.text-container h1{
+    margin-bottom: 32px; /*Margem Superior de 32px*/
+}
+
+/*LISTA DA SEÇÃO DO CONTEÚDO PRINCIPAL DA PÁGINA CARDÁPIO*/
+.texto-cardapio ul{
+    padding: 16px; /*Preenchimento de 16px*/
+}
+
+/*PRIMEIRO ITEM DA LISTA DA SEÇÃO DO CONTEÚDO PRINCIPAL DA PÁGINA CARDÁPIO*/
+.texto-cardapio ul li:first-child{
+    margin-top: 32px; /*Margem Superior de 32px*/
+}
+
+/*ITENS DA LISTA DA SEÇÃO DO CONTEÚDO PRINCIPAL DA PÁGINA CARDÁPIO*/
+.texto-cardapio ul li{
+    margin-top: 8px; /*Margem Superior de 8px*/
+}
+
+/*TEXTO DE DESTAQUE*/
+span{
+    margin-top: 32px; /*Margem Superior de 32px*/
+    font-size: 1.2em; /*Tamanho da fonte de 1.2 em*/
+}
+
+/*TODAS AS IMAGENS*/
+img{
+    border-radius: 8px; /*Borda Arredondada*/
+    width: 100%; /*Largura de 100% ao elemento pai*/
+    margin: 32px 0; /*Margem de 32px(Topo e Bottom) e zera as laterais*/
+}
+
+/*IMAGENS DA SECÃO DO CONTEÚDO PRINCIPAL*/
+main section img{
+    border: 2px solid #1C1C1C; /*Borda Preta de 2px*/
+}
+
+/*LOGOTIPO*/
+#logo{
+    width: 120px; /*Largura do Logo*/
+}
+
+/*******************************************************************************************************
+/*ESSE MENU ADICIONA A CLASSE, POIS ASSIM DELEGA A RESPONSABILIDADE PELO O QUE A LINGUAGEM FOI FEITA
+/*******************************************************************************************************
+/*O CSS É UMA LINGUAGEM DE ESTILIZAÇÃO, E O JAVASCRIPT SE ENCARREGA DE FAZER A PARTE LÓGICA DO PROJETO**
+/*******************************************************************************************************
+/*ESSA CLASSE SERÁ ADICIONADA PELO JAVASCRIPT, PARA MAIORES INFORMAÇÕES ACESSAR A PASTA JS/script.js****
+/*******************************************************************************************************
+*/
+
+/*MENU PARA MANIPULAR NO JAVASCRIPT - ADICIONAR ESSA CLASSE*/
+.menu-desktop-celular{
+    width: 100vw !important; /*Largura com 100% do Viewport com maior especifidade*/
+    height: 100vh !important; /*Altura com 100% do Viewport com maior especifidade*/
+    background-color: #dc0000df; /*Cor do Fundo Vermelho com Transparência*/
+    display: flex !important; /*Flexbox com maior especifidade*/
+    flex-direction: column; /*Alinha em Colunas*/
+    align-items: center; /*Alinha o Eixo Perpendicular ao Centro*/
+    justify-content: center; /*Alinha o Eixo Principal ao Centro*/
+    gap: 48px; /*Espaçamento de 48px*/
+}
+
+
+/*MENU DA PÁGINA*/
+#menuDesktop {
+    display: none; /*Esconde o Menu*/
+    position: absolute; /*Posição Absoluta*/
+    top: 0; /*Alinha no Topo*/
+    left: 0; /*Alinha na Esquerda*/
+    width: 100%; /*Largura de 100%*/
+    height: 100%; /*Altura de 100%*/
+    z-index: 2; /*Camada 2 do HTML*/
+    list-style-type: none; /*Esconde as Marcações da lista*/
+}
+
+/*LINKS DO MENU DE NAVEGAÇÃO*/
+#menuDesktop a{
+    border: 1px solid #f0e2efdc;
+    border-radius: 4px;
+    padding: 16px 24px; /*Preenchimento de 16px na Vertical e de 24px na Horizontal*/
+    text-decoration: none; /*Esconde o Sublinhado*/
+    color: #F0E2EF; /*Cor do Texto - Branca*/
+}
+
+/*BOTÕES DO MENU MOBILE*/
+#menuResponsivo, #fecharMenuMobile{
+    cursor: pointer; /*Mãozinha a passar o mouse*/
+    position: absolute; /*Posição Absoluta*/
+    right: 16px; /*Alinha a 16px do lado direito*/
+    width: 24px; /*Largura do Menu Responsivo*/
+}
+
+/*MENU PARA MANIPULAR NO JAVASCRIPT - ADICIONAR ESSA CLASSE*/
+.menu-responsivo-celular{
+    display: none !important; /*Especifidade Maior em ocultar o display*/
+}
+
+/*BOTÃO DE FECHAR O MENU NO CELULAR*/
+#fecharMenuMobile{
+    display: none; /*Esconde o Menu*/
+    z-index: 3; /*Camada 3*/
+}
+
+/*MENU PARA MANIPULAR NO JAVASCRIPT - ADICIONAR ESSA CLASSE*/
+.fechar-menu-mobile-celular{
+    display: block !important; /*Display Block com maior especifidade*/
+}
+
+/*SEÇÃO DO CONTEÚDO PRINCIPAL*/
+main section {
+    margin-top: 48px; /*Margem Superior de 48px*/
+    display: flex; /*Flexbox*/
+    flex-direction: column; /*Alinha em Colunas*/
+    align-items: center; /*Alinha ao Centro no Eixo Perpendicular*/
+    padding: 0 40px; /*Espaçamento nas laterais de 40px e zera no topo e embaixo*/
+}   
+
+/*CONTAINER DE IMAGENS E DE TEXTO*/
+.image-container, .text-container{
+    display: flex; /*Flexbox*/
+    flex-direction: column; /*Alinha em Colunas*/
+    align-items: center; /*Alinha o Eixo Perpendicular ao Centro*/
+}
+
+/*PARÁGRAFO DA LOCALIZAÇÃO DO RESTAURANTE*/
+#localizacao-restaurante{
+    margin-bottom: 32px; /*Margem Inferior de 32px*/
+}
+
+/*MAPA DO GOOGLE*/
+iframe{
+    border-radius: 4px; /*Arredonda a Borda*/
+    width: 100%; /*Largura de 80% ao Elemento Pai*/
+    height: 300px; /*Largura de 300px*/
+}
+
+/*FORMULÁRIO*/
+form{
+    margin-top: 32px; /*Margem Superior de 32px*/
+    display: flex; /*Flexbox*/
+    flex-direction: column; /*Alinhamento em Colunas*/
+    align-items: center; /*Alinha ao Centro no Eixo Perpendicular*/
+}
+
+/*TEXTO DO FORMULÁRIO*/
+form label{
+    font-weight: bold; /*Fonte em Negrito*/
+    margin-bottom: 8px; /*Margem Inferior de 8px*/
+}
+
+/*CAMPO DE ENTRADA DO FORMULÁRIO*/
+form input{
+    margin-bottom: 8px; /*Margem Superior de 8px*/
+    border: none; /*Tira a Borda*/
+    background-color: #1C1C1C; /*Cor de Fundo Preta*/
+    color: #F0E2EF; /*Cor da Fonte - Branco*/
+    text-align: center; /*Alinha o Texto ao Centro*/
+    width: 70vw; /*Largura de 70% da Tela*/
+}
+
+/*BOTÃO DE ENVIAR O FORMULÁRIO*/
+#submitBtn{
+    font-weight: 500;/*Peso da Fonte de 500*/
+    background-color: #DC0000df; /*Cor de Fundo um Vermelho mais transparente*/
+    color: #F0E2EF; /*Cor do Texto - Branco*/
+    border: none; /*Tira a Borda*/
+    border-radius: 4px; /*Arredonda a borda*/
+    width: 96px; /*Largura de 96px*/
+    height: 32px; /*Altura de 32px*/
+    margin-top: 32px; /*Margem Superior de 32px*/
+}
+
+/*LOGO DO WHATSAPP*/
+#whatsapp{
+    animation: pulse 2.8s linear infinite; /*Animação Infinita a cada 2.8 segundos de forma linear*/
+    position: fixed; /*Posição fixa no topo*/
+    right: 8px; /*Margem da Direita de 8px*/
+    bottom: 0; /*Alinha no canto inferior da tela*/
+    width: 40px;
+}
+
+/*RODAPÉ*/
+footer{
+    width: 100%; /*Largura de 100%*/
+    position: absolute; /*Posição Absoluta*/
+    bottom: -148px; /*Ajusta o Footer a com correção para a posição inferior*/
+    display: flex; /*Flexbox*/
+    justify-content: center; /*Alinha ao Centro no Eixo Principal*/
+    align-items: center; /*Alinha ao Centro no Eixo Perpendicular*/
+    background-color: #1C1C1C; /*Cor de Fundo - Preto*/
+    color: #F0E2EF; /*Cor da Fonte Branca*/
+    height: 96px; /*Altura de 96px*/
+}
+
+/*FOOTER TEXTO*/
+footer small{
+    font-size: 0.694em; /*Tamanho da Fonte - 69,4%*/
+}
+
+/*ANIMAÇÃO*/
+@keyframes pulse {
+    0%{
+        transform: scale(1); /*Tamanho de 100%*/
+    }
+
+    50%{
+        transform: scale(1.10); /*Tamanho de 110%*/
+    }
+
+    100%{
+        transform: scale(1); /*Tamanho de 100%*/
+    }
+}
+
+/*TABLET*/
+@media (min-width: 576px) {
+    /*SEÇÃO DO CONTEÚDO PRINCIPAL*/
+    main section{
+        padding: 0 96px; /*Espaçamento nas laterais de 96px e zera no topo e embaixo*/   
+    }
+
+    #whatsapp{
+        width: 48px; /*Largura de 48px*/
+    }
+}
+
+/*DESKTOP*/
+@media (min-width: 1024px) {
+    /*CABEÇALHO*/
+    header{
+        padding: 24px 96px; /*Preenchimento de 15% na horizontal e zera o Vertical*/
+        display: flex; /*Flexbox*/
+        align-items: center; /*Alinha os Itens ao Centro*/
+    }
+
+    /*TITULO DA PÁGINA*/
+    h1, h2{
+        font-size: 2em; /*Tamanho da fonte de 200%*/
+    }
+
+    /*LOGOTIPO*/
+    #logo{
+        width: 144px; /*Largura de 144px*/
+    }
+
+    /*PARÁGRAFO*/
+    p{
+        font-size: 1em; /*Tamanho da fonte de 100%*/
+    }
+
+    label, strong, #submitBtn{
+        font-size: 0.88em;
+    }
+
+    /*DESTAQUE DO TEXTO*/
+    span{
+        margin-top: 48px; /*Margem Superior de 48px*/
+        font-size: 1.5em; /*Tamanho da fonte de 150%*/
+    }
+
+    /*ESCONDE O CONTEÚDO NO MOBILE*/
+    .hidden-mobile{
+        display: inline; /*Aparece o Elemento*/
+        margin-bottom: 32px; /*Margem Inferior de 32px*/
+    }
+
+    /*ESCONDE O CONTEÚDO NO DESKTOP*/
+    .hidden-desktop{
+        display: none; /*Esconde o Elemento*/
+    }
+
+    /*BOTÕES DO MENU NO CELULAR*/
+    #menuResponsivo, #fecharMenuMobile{
+        display: none; /*Oculta o Elemento*/
+    }
+
+    /*MENU DE NAVEGAÇÃO*/
+    #menuDesktop{
+        width: 100% !important; /*Largura de 100% com maior especifidade*/
+        height: 100% !important; /*Altura de 100% com maior especifidade*/
+        background-color: transparent;
+        position: static; /*Volta ao Padrão Original*/
+        display: flex; /*Flexbox*/
+        flex-direction: row; /*Coloca em Linhas*/
+        justify-content: space-between; /*Espaçamento entre eles*/
+        align-items: center; /*Alinha ao Centro no Eixo Perpendicular*/
+        gap: 0 !important; /*Zera o Espaçamento com maior especifidade*/
+    }
+
+    /*LINKS DO MENU DE NAVEGAÇÃO*/
+    #menuDesktop a{
+        padding: 0; /*Zera o Preenchimento*/
+        font-size: 1em; /*Tamanho da fonte de 100%*/
+        color: #1C1C1C; /*Cor do Texto - Preto*/
+        margin-left: 24px; /*Margem de 16px a Esquerda*/
+    }
+
+    #fecharMenuMobile{
+        display: none !important; /*Oculta o Display com Maior Especifidade*/
+    }
+
+    /*LINKS DO MENU DE NAVEGAÇÃO AO PASSAR O MOUSE*/
+    #menuDesktop a:hover{
+        color: #DC0000; /*Cor do Link - Vermelho*/
+    }
+
+    /*SEÇÕES DO CONTEÚDO PRINCIPAL*/
+    main section{
+        position: relative; /*Posição Relativa*/
+        padding: 0 96px; /*Espaçamento Lateral de 96px e zera o Horizontal*/
+        display: flex; /*Flexbox*/
+        flex-direction: row; /*Coloca em Linhas*/
+        align-items: start; /*Alinha no Começo os Itens do Eixo Perpendicular*/
+        justify-content: center; /*Alinha ao Centro os itens do Eixo Principal*/
+        gap: 64px; /*Espaçamento de 64px*/
+    }
+    
+    /*IMAGENS NA SEÇÃO DO CONTEÚDO PRINCIPAL*/
+    main section img{
+        width: 35vw; /*Largura de 35% do Viewport*/
+    }
+
+    /*MAPA DO GOOGLE*/
+    iframe{
+        border-radius: 8px; /*Borda Arredondada*/
+        width: 100%; /*Largura de 100%*/
+        height: 520px; /*Altura de 520px*/
+    }
+    
+    /*LOGO DO WHATSAPP*/
+    /**
+    /*---------------------------------------------------------------
+    /* ESSA CLASSE JÁ ESTÁ HERDANDO O POSITION FIXED DO CÓDIGO ACIMA
+    /*---------------------------------------------------------------
+    */
+    #whatsapp{
+        width: 56px; /*Largura de 64px*/
+        right: 24px; /*Altura de 24px*/
+        bottom: 0; /*Alinha no canto inferior*/
+    }
+
+    /*CONTAINER DO TEXTO*/
+    .text-container{
+        margin-top: 24px; /*Margem Superior de 24px*/
+    }
+
+    /*CONTAINER DE TEXTO - PÁGINA CARDÁPIO*/
+    .text-container-cardapio{
+        display: flex; /*Flexbox*/
+        flex-direction: column; /*Alinha em Colunas*/
+        gap: 48px; /*Espaçamento de 48px*/
+    }
+
+    /*TÍTULO DO CONTAINER DE TEXTO - PÁGINA CARDÁPIO*/
+    #titulo-cardapio{
+        margin: 0; /*Zera a Margem*/
+    }
+
+    /*LISTA DO CONTAINER DE TEXTO - PÁGINA CARDÁPIO*/
+    .texto-cardapio ul{
+        font-size: 0.88em; /*Tamanho da Fonte de 88%*/
+    }
+
+    /*CONTAINER DAS IMAGENS - PÁGINA CARDÁPIO*/
+    .cardapio-image-container{
+        display: flex; /*Flexbox*/
+        flex-direction: column; /*Alinha em Colunas*/
+        align-items: center; /*Alinha os Itens do Eixo Perpendicular ao Centro*/
+    }
+
+    /*IMAGENS DO CONTAINER - PÁGINA CARDÁPIO*/
+    .cardapio-image-container img{
+        width: 70%; /*Largura de 70%*/
+    }
+
+    /*FORMULÁRIO*/
+    form{
+        margin-top: 48px; /*Margem Superior de 48px*/
+    }
+
+    /*CAMPOS DE ENTRADA DO FORMULÁRIO*/
+    form input{
+        height: 24px; /*Altura de 24px*/
+    }
+
+    /*BOTÃO DE ENVIAR*/
+    #submitBtn{
+        width: 128px; /*Largura de 144px*/
+        height: 40px; /*Altura de 40px*/
+    }
+
+    #submitBtn:hover{
+        cursor: pointer; /*Cursor Pointer*/
+        transform: scale(1.03); /*Aumenta o botão em 3%*/
+        transition: 0.5s linear; /*Transição Suave de 0.5 segundos*/
+    }
+
+    /*RODAPÉ DA PÁGINA*/
+    footer{
+        bottom: -192px; /*Ajusta o Footer a com correção para a posição inferior*/
+        height: 120px; /*Altura de 120px*/
+    }
+
+    /*TEXTO DO RODAPÉ DA PÁGINA*/
+    footer small{
+        font-size: 1em; /*Tamanho da Fonte de 100%*/
+    }
+}
