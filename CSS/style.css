@@ -128,8 +128,8 @@ main section img{
 
 /*LINKS DO MENU DE NAVEGAÇÃO*/
 #menuDesktop a{
-    border: 1px solid #f0e2efdc;
-    border-radius: 4px;
+    border: 1px solid #f0e2efdc; /*Borda sólida de 1px - Branca*/ 
+    border-radius: 4px; /*Arredonda a Borda*/
     padding: 16px 24px; /*Preenchimento de 16px na Vertical e de 24px na Horizontal*/
     text-decoration: none; /*Esconde o Sublinhado*/
     color: #F0E2EF; /*Cor do Texto - Branca*/
