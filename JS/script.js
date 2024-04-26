@@ -34,13 +34,16 @@ function getPosition(){
     const mainRect = mainElement.getBoundingClientRect() // Captura a posição do Main
     const footerRect = footerElement.getBoundingClientRect() // Captura a posição do Footer
     const isDesktop = window.innerWidth >= 1024
+    const isEndPositionMain = footerRect.top <= window.innerHeight && mainRect.bottom > footerRect.height
+    const footerRectHeightDesktop = footerRect.height - 179
+    const footerRectHeightMobile = footerRect.height - 148
 
-    // Se a largura da tela for maior que 1024px
+    // Se for Desktop
     if(isDesktop){
         // Se o footer estiver no topo e o main estiver embaixo
-        if(footerRect.top <= window.innerHeight && mainRect.bottom > footerRect.height){
+        if(isEndPositionMain){
             whatsappBtn.style.position = 'absolute' // Muda a posição para absoluta
-            whatsappBtn.style.bottom = footerRect.height + -179 + 'px' // Corrige o Botão do Whatsapp
+            whatsappBtn.style.bottom = footerRectHeightDesktop + 'px' // Corrige o Botão do Whatsapp
             whatsappBtn.style.right = '24px' // Botão do Whatsapp a direita com uma margem de 24px
         } else{
             whatsappBtn.style.position = 'fixed' // Reseta a posição
@@ -48,9 +51,9 @@ function getPosition(){
             whatsappBtn.style.right = '24px' // Reseta a posição
         }
     }  else {
-        if(footerRect.top <= window.innerHeight && mainRect.bottom > footerRect.height){
+        if(isEndPositionMain){
             whatsappBtn.style.position = 'absolute' // Muda a posição para absoluta
-            whatsappBtn.style.bottom = footerRect.height + -148 + 'px' // Corrige o botão do Whatsapp
+            whatsappBtn.style.bottom = footerRectHeightMobile + 'px' // Corrige o botão do Whatsapp
             whatsappBtn.style.right = '8px' // Ajusta o botão a direita em 24px
         } else{
             whatsappBtn.style.position = 'fixed' // Reseta a posição
