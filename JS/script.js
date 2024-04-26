@@ -5,6 +5,7 @@ footerText.innerText = `Direitos de Uso e Copyright | Oishi - ${yearToday}` // M
 
 // Manipula Eventos
 const bodyElement = window.document.body // Captura o Body
+const list = document.querySelector('ul')
 menuResponsivo.addEventListener('click', abrirMenu) // Adiciona evento ao botão de Menu no Celular
 fecharMenuMobile.addEventListener('click', fecharMenu) // Adiciona evento ao botão de fechar o Menu no Celular
 document.addEventListener('scroll', getPosition) // Adiciona evento de Scroll a posição da tela
@@ -32,9 +33,10 @@ function getPosition(){
     const footerElement = document.querySelector('footer') // Armazena o Footer em uma Variável
     const mainRect = mainElement.getBoundingClientRect() // Captura a posição do Main
     const footerRect = footerElement.getBoundingClientRect() // Captura a posição do Footer
+    const isDesktop = window.innerWidth >= 1024
 
     // Se a largura da tela for maior que 1024px
-    if(window.innerWidth >= 1024){
+    if(isDesktop){
         // Se o footer estiver no topo e o main estiver embaixo
         if(footerRect.top <= window.innerHeight && mainRect.bottom > footerRect.height){
             whatsappBtn.style.position = 'absolute' // Muda a posição para absoluta
