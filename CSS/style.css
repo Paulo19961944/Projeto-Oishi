@@ -102,11 +102,11 @@ main section img{
 */
 
 /*MENU PARA MANIPULAR NO JAVASCRIPT - ADICIONAR ESSA CLASSE*/
-#menuDesktop .menu-desktop-celular{
-    width: 100vw; /*Largura com 100% do Viewport com maior especifidade*/
-    height: 100vh; /*Altura com 100% do Viewport com maior especifidade*/
+.menu-desktop-celular{
+    width: 100vw !important; /*Largura com 100% do Viewport com maior especifidade*/
+    height: 100vh !important; /*Altura com 100% do Viewport com maior especifidade*/
     background-color: #dc0000df; /*Cor do Fundo Vermelho com Transparência*/
-    display: flex; /*Flexbox com maior especifidade*/
+    display: flex !important; /*Flexbox com maior especifidade*/
     flex-direction: column; /*Alinha em Colunas*/
     align-items: center; /*Alinha o Eixo Perpendicular ao Centro*/
     justify-content: center; /*Alinha o Eixo Principal ao Centro*/
@@ -144,8 +144,8 @@ main section img{
 }
 
 /*MENU PARA MANIPULAR NO JAVASCRIPT - ADICIONAR ESSA CLASSE*/
-#menuResponsivo .menu-responsivo-celular{
-    display: none; /*Especifidade Maior em ocultar o display*/
+.menu-responsivo-celular{
+    display: none !important; /*Especifidade Maior em ocultar o display*/
 }
 
 /*BOTÃO DE FECHAR O MENU NO CELULAR*/
@@ -155,8 +155,8 @@ main section img{
 }
 
 /*MENU PARA MANIPULAR NO JAVASCRIPT - ADICIONAR ESSA CLASSE*/
-#fecharMenuMobile .fechar-menu-mobile-celular{
-    display: block; /*Display Block com maior especifidade*/
+.fechar-menu-mobile-celular{
+    display: block !important; /*Display Block com maior especifidade*/
 }
 
 /*SEÇÃO DO CONTEÚDO PRINCIPAL*/
@@ -329,15 +329,15 @@ footer small{
 
     /*MENU DE NAVEGAÇÃO*/
     #menuDesktop{
-        width: 100%; /*Largura de 100% com maior especifidade*/
-        height: 100%; /*Altura de 100% com maior especifidade*/
+        width: 100% !important; /*Largura de 100% com maior especifidade*/
+        height: 100% !important; /*Altura de 100% com maior especifidade*/
         background-color: transparent;
         position: static; /*Volta ao Padrão Original*/
         display: flex; /*Flexbox*/
         flex-direction: row; /*Coloca em Linhas*/
         justify-content: space-between; /*Espaçamento entre eles*/
         align-items: center; /*Alinha ao Centro no Eixo Perpendicular*/
-        gap: 0; /*Zera o Espaçamento com maior especifidade*/
+        gap: 0 !important; /*Zera o Espaçamento com maior especifidade*/
     }
 
     /*LINKS DO MENU DE NAVEGAÇÃO*/
@@ -349,7 +349,7 @@ footer small{
     }
 
     #fecharMenuMobile{
-        display: none; /*Oculta o Display com Maior Especifidade*/
+        display: none !important; /*Oculta o Display com Maior Especifidade*/
     }
 
     /*LINKS DO MENU DE NAVEGAÇÃO AO PASSAR O MOUSE*/
